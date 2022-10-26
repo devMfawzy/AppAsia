@@ -12,5 +12,4 @@ enum ViewState: Equatable {
     case loading
     case finishedLoading
     case error(Error)
-    case showDetails(String)
 }

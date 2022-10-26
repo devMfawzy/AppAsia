@@ -10,6 +10,7 @@ import Combine
 
 protocol MovieServiceProtocol {
     func movieList(page: Int) -> AnyPublisher<MoviesResponse, Error>
+    func movieDetails(id: Int) -> AnyPublisher<MovieDetails, Error>
 }
 
 struct MovieService: MovieServiceProtocol {
@@ -30,6 +31,11 @@ struct MovieService: MovieServiceProtocol {
     
     func movieList(page: Int) -> AnyPublisher<MoviesResponse, Error> {
         let url = Endpoints.Movies.nowPlayingURL(page: page)
+        return publisher(url: url)
+    }
+    
+    func movieDetails(id: Int) -> AnyPublisher<MovieDetails, Error> {
+        let url = Endpoints.Movies.movieDetailsURL(id: id)
         return publisher(url: url)
     }
     

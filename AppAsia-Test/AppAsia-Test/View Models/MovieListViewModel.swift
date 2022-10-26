@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class MovieListViewModel {
+final class MovieListViewModel {
     
     private let service: MovieServiceProtocol
     private var nextPage = 1
@@ -23,16 +23,16 @@ class MovieListViewModel {
     }
     
     func loadMovies() {
-        movieList(page: 1)
+        fetchMovieList(page: 1)
     }
     
     func loadNextPage() {
         guard totalResults > movies.count else { return }
         guard state != .loading else { return }
-        movieList(page: nextPage)
+        fetchMovieList(page: nextPage)
     }
     
-    private func movieList(page: Int) {
+    private func fetchMovieList(page: Int) {
         state = .loading
         service
             .movieList(page: page)
@@ -48,7 +48,11 @@ class MovieListViewModel {
                     self.totalResults = model.totalResults
                     let movies =  model.results.map { MovieBO(dto: $0) }
                     if page > 1 {
-                        self.movies.append(contentsOf: movies)
+                        movies.forEach { movie in
+                            if !self.movies.contains(movie) {
+                                self.movies.append(movie)
+                            }
+                        }
                     } else {
                         self.movies = movies
                     }

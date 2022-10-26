@@ -11,14 +11,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-
+    var coordinator: Coordinator?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        let mainViewController = MoviesViewController()
+        if let window = window {
+            coordinator = MainCoordinator(window: window)
+        }
+        coordinator?.start()
         
-        window?.rootViewController = mainViewController
-        window?.makeKeyAndVisible()
         return true
     }
 

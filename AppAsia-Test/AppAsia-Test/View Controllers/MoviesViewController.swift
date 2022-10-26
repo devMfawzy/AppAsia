@@ -8,9 +8,13 @@
 import UIKit
 import Combine
 
+protocol MoviesViewControllerDelegate: AnyObject {
+    func showMovieDetails(id: Int)
+}
+
 class MoviesViewController: UIViewController {
-    private let widthRatio: CGFloat = 0.86
-    private let heightToWidthRatio: CGFloat = 1.70
+    private let widthRatio: CGFloat = 0.95
+    private let heightToWidthRatio: CGFloat = 1.68
     private let itemSpacing: CGFloat = 6.0
     private let reloadThreshold = 0.75
     
@@ -18,11 +22,14 @@ class MoviesViewController: UIViewController {
     private var cancellables = Set<AnyCancellable>()
     private var dataSource: UICollectionViewDiffableDataSource<Section, MovieBO>?
     
+    weak var delegate: MoviesViewControllerDelegate?
+    
     let viewModel: MovieListViewModel
     
     init(viewModel: MovieListViewModel = MovieListViewModel()) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        title = "Movies"
         setupCollectionView()
     }
     
@@ -50,6 +57,11 @@ class MoviesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bindViewModel()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        mainView.collectionView.collectionViewLayout.invalidateLayout()
     }
     
     // MARK: - Private methods
@@ -86,8 +98,6 @@ class MoviesViewController: UIViewController {
         case .error(let error):
             self.mainView.stopLoading()
             self.mainView.showError(error: error)
-        case .showDetails(let details):
-            self.showDetails(details)
         }
     }
     
@@ -98,12 +108,6 @@ class MoviesViewController: UIViewController {
         dataSource?.apply(snapshot, animatingDifferences: true)
     }
     
-    private func showDetails(_ details: String) {
-        let alertController = UIAlertController(title: "Info", message: details, preferredStyle: .alert)
-        alertController.addAction(.init(title: "OK", style: .default))
-        present(alertController, animated: true)
-    }
-    
 }
 
 // MARK: Collection View Delegate
@@ -112,7 +116,8 @@ extension MoviesViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        //TODO: show details view
+        guard let id = viewModel.movies[safe: indexPath.row]?.id else { return }
+        delegate?.showMovieDetails(id: id)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -121,15 +126,15 @@ extension MoviesViewController: UICollectionViewDelegate {
         guard let lastRow = collectionView.indexPath(for: lastCell)?.row else { return }
         let loadedItemsCount = Double(viewModel.movies.count)
         let shouldLoadMore = Double(lastRow) >= (loadedItemsCount * reloadThreshold)
-        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(400)) { [weak self] in
-            if shouldLoadMore {
-                self?.scrollViewDidReachBottom(scrollView)
-            }
+        if shouldLoadMore {
+            self.scrollViewDidReachBottom(scrollView)
         }
     }
     
     func scrollViewDidReachBottom(_ scrollView: UIScrollView) {
-        viewModel.loadNextPage()
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(400)) { [weak self] in
+            self?.viewModel.loadNextPage()
+        }
     }
 }
 
@@ -137,7 +142,8 @@ extension MoviesViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let bounds = collectionView.bounds
-        let width = min(bounds.width, bounds.height) * widthRatio
+        var width = bounds.width > bounds.height ? bounds.width/2 : bounds.width
+        width *= widthRatio
         return CGSize(width: width, height: width*heightToWidthRatio)
     }
     

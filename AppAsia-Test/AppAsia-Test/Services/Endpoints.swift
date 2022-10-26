@@ -24,9 +24,9 @@ struct Endpoints {
             return components.url
         }
         
-        static func movieDetailsURL(id: String) -> URL? {
+        static func movieDetailsURL(id: Int) -> URL? {
             var components = urlComponents()
-            components.path += id
+            components.path += String(id)
             components.setQueryItems(with: ["api_key": Self.apiKey])
             return components.url
         }
@@ -42,8 +42,6 @@ struct Endpoints {
             components.path = "/3/movie/"
             return components
         }
-        
-        
     }
     
 }
