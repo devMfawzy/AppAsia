@@ -1,6 +1,13 @@
 # AppAsia
 AppAsia Assessment task 
 
+# Whats New
+1. Used MVVM architecture 
+1. Used CocoaPods as a dependency manager (just to use SDWebImage)
+1. Added some Unit tests
+1. Created UI progrmatically 
+1. Used Combine frameworks for state mangement 
+
 # Screenshots
 
 ![Simulator Screen Shot - iPhone 14 Pro Max - 2022-10-26 at 21 46 10](https://user-images.githubusercontent.com/2555697/198133495-411d9b2b-f684-4ca8-8b84-fca8d9183250.png)
