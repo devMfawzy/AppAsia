@@ -38,6 +38,7 @@
 		5B3346B42909BCEE001BEDAD /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3346B32909BCEE001BEDAD /* MainCoordinator.swift */; };
 		5B3346BC2909CB33001BEDAD /* AppAsiaMovieListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3346BB2909CB33001BEDAD /* AppAsiaMovieListTests.swift */; };
 		5B3346C32909CBE8001BEDAD /* MockMoviesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3346C22909CBE8001BEDAD /* MockMoviesService.swift */; };
+		5B3346C52909EFB1001BEDAD /* AppAsiaMovieDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3346C42909EFB1001BEDAD /* AppAsiaMovieDetailsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		5B3346B92909CB33001BEDAD /* AppAsia-TaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AppAsia-TaskTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B3346BB2909CB33001BEDAD /* AppAsiaMovieListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAsiaMovieListTests.swift; sourceTree = "<group>"; };
 		5B3346C22909CBE8001BEDAD /* MockMoviesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMoviesService.swift; sourceTree = "<group>"; };
+		5B3346C42909EFB1001BEDAD /* AppAsiaMovieDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAsiaMovieDetailsTests.swift; sourceTree = "<group>"; };
 		9FBDD977DAD07C6640FFB37A /* Pods_AppAsia_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppAsia_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D809CF87E4B2608AFE37B16F /* Pods-AppAsia-Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppAsia-Task.release.xcconfig"; path = "Target Support Files/Pods-AppAsia-Task/Pods-AppAsia-Task.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -233,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				5B3346BB2909CB33001BEDAD /* AppAsiaMovieListTests.swift */,
+				5B3346C42909EFB1001BEDAD /* AppAsiaMovieDetailsTests.swift */,
 				5B3346C22909CBE8001BEDAD /* MockMoviesService.swift */,
 			);
 			path = "AppAsia-TaskTests";
@@ -424,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B3346C32909CBE8001BEDAD /* MockMoviesService.swift in Sources */,
+				5B3346C52909EFB1001BEDAD /* AppAsiaMovieDetailsTests.swift in Sources */,
 				5B3346BC2909CB33001BEDAD /* AppAsiaMovieListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

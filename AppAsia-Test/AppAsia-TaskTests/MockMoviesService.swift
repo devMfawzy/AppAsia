@@ -41,7 +41,7 @@ final class MockMoviesService: MovieServiceProtocol {
             case .error(let error):
                 self.movieDetailsSubject.send(completion: .failure(error))
             case .data(let data):
-                guard let movie = data[safe: id-1] else {
+                guard let movie = data.first(where: { $0.id == id}) else {
                     self.movieDetailsSubject.send(completion: .failure(.parsing))
                     return
                 }
