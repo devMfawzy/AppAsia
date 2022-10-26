@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		421E798715AE58598FF265F1 /* Pods_AppAsia_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBDD977DAD07C6640FFB37A /* Pods_AppAsia_Task.framework */; };
 		5B33466729087F6F001BEDAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B33466629087F6F001BEDAD /* AppDelegate.swift */; };
 		5B33466B29087F6F001BEDAD /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B33466A29087F6F001BEDAD /* MoviesViewController.swift */; };
 		5B33467029087F72001BEDAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B33466F29087F72001BEDAD /* Assets.xcassets */; };
@@ -23,7 +24,6 @@
 		5B3346932908A883001BEDAD /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3346922908A883001BEDAD /* ErrorView.swift */; };
 		5B3346952908A929001BEDAD /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3346942908A929001BEDAD /* Section.swift */; };
 		5B3346972908AAE8001BEDAD /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3346962908AAE8001BEDAD /* MovieCollectionViewCell.swift */; };
-		5B33469A2908AC82001BEDAD /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5B3346992908AC82001BEDAD /* SDWebImage */; };
 		5B33469C2908AD0A001BEDAD /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B33469B2908AD0A001BEDAD /* UIImage.swift */; };
 		5B33469E2908AE90001BEDAD /* MovieCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B33469D2908AE90001BEDAD /* MovieCellView.swift */; };
 		5B3346A02908AFA2001BEDAD /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B33469F2908AFA2001BEDAD /* UIView+Border.swift */; };
@@ -36,9 +36,22 @@
 		5B3346AF2909154C001BEDAD /* Collection+SafeSubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3346AE2909154C001BEDAD /* Collection+SafeSubscript.swift */; };
 		5B3346B12909BC9D001BEDAD /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3346B02909BC9D001BEDAD /* Coordinator.swift */; };
 		5B3346B42909BCEE001BEDAD /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3346B32909BCEE001BEDAD /* MainCoordinator.swift */; };
+		5B3346BC2909CB33001BEDAD /* AppAsiaMovieListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3346BB2909CB33001BEDAD /* AppAsiaMovieListViewModelTests.swift */; };
+		5B3346C32909CBE8001BEDAD /* MockMoviesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3346C22909CBE8001BEDAD /* MockMoviesService.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5B3346BD2909CB33001BEDAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B33465B29087F6E001BEDAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B33466229087F6F001BEDAD;
+			remoteInfo = "AppAsia-Task";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		38EFA69E66CBB73F0AE7E4C9 /* Pods-AppAsia-Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppAsia-Task.debug.xcconfig"; path = "Target Support Files/Pods-AppAsia-Task/Pods-AppAsia-Task.debug.xcconfig"; sourceTree = "<group>"; };
 		5B33466329087F6F001BEDAD /* AppAsia-Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppAsia-Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B33466629087F6F001BEDAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B33466A29087F6F001BEDAD /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +82,11 @@
 		5B3346AE2909154C001BEDAD /* Collection+SafeSubscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+SafeSubscript.swift"; sourceTree = "<group>"; };
 		5B3346B02909BC9D001BEDAD /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		5B3346B32909BCEE001BEDAD /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		5B3346B92909CB33001BEDAD /* AppAsia-TaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AppAsia-TaskTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B3346BB2909CB33001BEDAD /* AppAsiaMovieListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAsiaMovieListViewModelTests.swift; sourceTree = "<group>"; };
+		5B3346C22909CBE8001BEDAD /* MockMoviesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMoviesService.swift; sourceTree = "<group>"; };
+		9FBDD977DAD07C6640FFB37A /* Pods_AppAsia_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppAsia_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D809CF87E4B2608AFE37B16F /* Pods-AppAsia-Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppAsia-Task.release.xcconfig"; path = "Target Support Files/Pods-AppAsia-Task/Pods-AppAsia-Task.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,18 +94,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B33469A2908AC82001BEDAD /* SDWebImage in Frameworks */,
+				421E798715AE58598FF265F1 /* Pods_AppAsia_Task.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B3346B62909CB33001BEDAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11F244650706889D6A277964 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				38EFA69E66CBB73F0AE7E4C9 /* Pods-AppAsia-Task.debug.xcconfig */,
+				D809CF87E4B2608AFE37B16F /* Pods-AppAsia-Task.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5B33465A29087F6E001BEDAD = {
 			isa = PBXGroup;
 			children = (
 				5B33466529087F6F001BEDAD /* AppAsia-Test */,
+				5B3346BA2909CB33001BEDAD /* AppAsia-TaskTests */,
 				5B33466429087F6F001BEDAD /* Products */,
+				11F244650706889D6A277964 /* Pods */,
+				731CBA061FF5D6CB3B467062 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				5B33466329087F6F001BEDAD /* AppAsia-Task.app */,
+				5B3346B92909CB33001BEDAD /* AppAsia-TaskTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -191,6 +229,23 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		5B3346BA2909CB33001BEDAD /* AppAsia-TaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B3346BB2909CB33001BEDAD /* AppAsiaMovieListViewModelTests.swift */,
+				5B3346C22909CBE8001BEDAD /* MockMoviesService.swift */,
+			);
+			path = "AppAsia-TaskTests";
+			sourceTree = "<group>";
+		};
+		731CBA061FF5D6CB3B467062 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FBDD977DAD07C6640FFB37A /* Pods_AppAsia_Task.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -198,21 +253,38 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B33467729087F72001BEDAD /* Build configuration list for PBXNativeTarget "AppAsia-Task" */;
 			buildPhases = (
+				E23F0BBD9A0095147E04AE94 /* [CP] Check Pods Manifest.lock */,
 				5B33465F29087F6F001BEDAD /* Sources */,
 				5B33466029087F6F001BEDAD /* Frameworks */,
 				5B33466129087F6F001BEDAD /* Resources */,
+				E8DBEFFD28B56EAC81308244 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "AppAsia-Task";
-			packageProductDependencies = (
-				5B3346992908AC82001BEDAD /* SDWebImage */,
-			);
 			productName = "AppAsia-Test";
 			productReference = 5B33466329087F6F001BEDAD /* AppAsia-Task.app */;
 			productType = "com.apple.product-type.application";
+		};
+		5B3346B82909CB33001BEDAD /* AppAsia-TaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B3346C12909CB33001BEDAD /* Build configuration list for PBXNativeTarget "AppAsia-TaskTests" */;
+			buildPhases = (
+				5B3346B52909CB33001BEDAD /* Sources */,
+				5B3346B62909CB33001BEDAD /* Frameworks */,
+				5B3346B72909CB33001BEDAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B3346BE2909CB33001BEDAD /* PBXTargetDependency */,
+			);
+			name = "AppAsia-TaskTests";
+			productName = "AppAsia-TaskTests";
+			productReference = 5B3346B92909CB33001BEDAD /* AppAsia-TaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -227,6 +299,10 @@
 					5B33466229087F6F001BEDAD = {
 						CreatedOnToolsVersion = 14.0;
 					};
+					5B3346B82909CB33001BEDAD = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 5B33466229087F6F001BEDAD;
+					};
 				};
 			};
 			buildConfigurationList = 5B33465E29087F6E001BEDAD /* Build configuration list for PBXProject "AppAsia-Task" */;
@@ -238,14 +314,12 @@
 				Base,
 			);
 			mainGroup = 5B33465A29087F6E001BEDAD;
-			packageReferences = (
-				5B3346982908AC82001BEDAD /* XCRemoteSwiftPackageReference "SDWebImage" */,
-			);
 			productRefGroup = 5B33466429087F6F001BEDAD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				5B33466229087F6F001BEDAD /* AppAsia-Task */,
+				5B3346B82909CB33001BEDAD /* AppAsia-TaskTests */,
 			);
 		};
 /* End PBXProject section */
@@ -260,7 +334,56 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5B3346B72909CB33001BEDAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E23F0BBD9A0095147E04AE94 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppAsia-Task-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8DBEFFD28B56EAC81308244 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppAsia-Task/Pods-AppAsia-Task-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppAsia-Task/Pods-AppAsia-Task-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppAsia-Task/Pods-AppAsia-Task-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5B33465F29087F6F001BEDAD /* Sources */ = {
@@ -296,7 +419,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5B3346B52909CB33001BEDAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B3346C32909CBE8001BEDAD /* MockMoviesService.swift in Sources */,
+				5B3346BC2909CB33001BEDAD /* AppAsiaMovieListViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B3346BE2909CB33001BEDAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B33466229087F6F001BEDAD /* AppAsia-Task */;
+			targetProxy = 5B3346BD2909CB33001BEDAD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5B33467129087F72001BEDAD /* LaunchScreen.storyboard */ = {
@@ -426,6 +566,7 @@
 		};
 		5B33467829087F72001BEDAD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38EFA69E66CBB73F0AE7E4C9 /* Pods-AppAsia-Task.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -454,6 +595,7 @@
 		};
 		5B33467929087F72001BEDAD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D809CF87E4B2608AFE37B16F /* Pods-AppAsia-Task.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -480,6 +622,48 @@
 			};
 			name = Release;
 		};
+		5B3346BF2909CB33001BEDAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F7RWFZ45WK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "-Xcc -fmodule-map-file=$(PROJECT_TEMP_ROOT)/GeneratedModuleMaps/macosx/SDWebImage.modulemap";
+				"OTHER_SWIFT_FLAGS[arch=*]" = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fawzy.AppAsia-TaskTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppAsia-Task.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AppAsia-Task";
+			};
+			name = Debug;
+		};
+		5B3346C02909CB33001BEDAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F7RWFZ45WK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "-Xcc -fmodule-map-file=$(PROJECT_TEMP_ROOT)/GeneratedModuleMaps/macosx/SDWebImage.modulemap";
+				"OTHER_SWIFT_FLAGS[arch=*]" = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fawzy.AppAsia-TaskTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppAsia-Task.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AppAsia-Task";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -501,26 +685,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		5B3346C12909CB33001BEDAD /* Build configuration list for PBXNativeTarget "AppAsia-TaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B3346BF2909CB33001BEDAD /* Debug */,
+				5B3346C02909CB33001BEDAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		5B3346982908AC82001BEDAD /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		5B3346992908AC82001BEDAD /* SDWebImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5B3346982908AC82001BEDAD /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImage;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5B33465B29087F6E001BEDAD /* Project object */;
 }
