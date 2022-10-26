@@ -10,7 +10,7 @@ import Combine
 
 @testable import AppAsia_Task
 
-final class AppAsiaMovieListViewModelTests: XCTestCase {
+final class AppAsiaMovieListTests: XCTestCase {
     
     var sut: MovieListViewModel!
     var cancellables = Set<AnyCancellable>()
